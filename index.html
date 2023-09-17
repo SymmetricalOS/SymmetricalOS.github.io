@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Symmetrical OS - Under Construction!</title>
-  </head>
-  <body>
-    <h1>Symmetrical OS</h1>
-    <img src="https://sugaryspire.com/construction-export.gif">
-    
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Symmetrical O's, now with whole grains! -->
+		<title>Symmetrical OS</title>
+		<meta name="description" content="The distro for everyone" />
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<style>
+			body {
+				margin: 0;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333;
+				top: 0;
+				width: 100%;
+			}
+
+			li {
+				float: right;
+			}
+
+			.logo {
+				float: left;
+			}
+
+			li a {
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+
+			li a:hover:not(.active) {
+				background-color: #111;
+			}
+
+			.active {
+				background-color: #04aa6d;
+			}
+
+			.bigbox {
+				display: block;
+				border: black;
+				border-style: solid;
+				margin: 32px;
+				width: fit-content;
+			}
+
+			.hmm {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			.news {
+				margin-left: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<div>
+				<span class="logo"></span>
+				<li><a class="active" href="#home">Home</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="#about">About</a></li>
+			</div>
+		</ul>
+		<div class="content">
+			<div class="bigbox">
+				<h1 class="hmm">The linux distro for everyone</h1>
+				<p class="hmm">
+					Symmetrical OS is a simple, lightweight, arch-based Linux
+					distro for every task from word processing to
+					programming.<br /><br />
+					It can be easily installed within 10 minutes with our
+					<a href="download/guide.html">installation guide</a>.
+				</p>
+			</div>
+			<div class="news">
+				<div style="display: inline-flex">
+					<h2>News Feed</h2>
+					<a href="feeds/rss.xml"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="32"
+							height="32"
+							fill="currentColor"
+							class="bi bi-rss"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+							/>
+							<path
+								d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"
+							/></svg></a>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
