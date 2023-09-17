@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 
-<channel>
-    <title>Symmetrical OS RSS</title>
-    <description>Symmetrical OS News Feed</description>
-    <item>
-        <title>Symmetrical OS Copper Development Update #1</title>
-        <description>Learn about this week's developments!</description>
-		<pubDate>2023-09-17 19:14 UTC</pubDate>
-    </item>
-</channel>
+	<channel>
+		<title>Symmetrical OS RSS</title>
+		<description>Symmetrical OS News Feed</description>
+		<item>
+			<title>Symmetrical OS Copper Development Update #1</title>
+			<description>Development has begun on the installer! The first ISO should be
+				downloadable very soon.</description>
+			<pubDate>2023-09-17 20:05 UTC</pubDate>
+		</item>
+	</channel>
 
 </rss>
