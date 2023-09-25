@@ -3,7 +3,7 @@ function wrapHtml(input, wrapper, extra="") {
 }
 
 async function rssToJson(feedLink) {
-    const h = await fetch("https://www.toptal.com/developers/feed2json/convert?url=" + feedLink);
+    const h = await fetch("https://www.toptal.com/developers/feed2json/convert?url=" + feedLink, {mode: "no-cors"});
     const dt = h.json();
     return dt;
 }
