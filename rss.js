@@ -20,4 +20,4 @@ for (const item of items) {
     var sub = wrapHtml("Published by " + item["author"]["name"], "small");
     buffer = buffer + wrapHtml(title + content + sub, "div");
 }
-document.write(buffer)
+document.write(buffer);
