@@ -8,7 +8,7 @@ async function rssToJson(feedLink) {
     return dt;
 }
 
-var rss = rssToJson("https://symmetricalos.github.io/");
+var rss = rssToJson("https://symmetricalos.github.io/feeds/rss.xml");
 
 var buffer = "";
 buffer = buffer + wrapHtml(rss["title"], "h1");
