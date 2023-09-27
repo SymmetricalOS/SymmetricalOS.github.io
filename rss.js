@@ -2,13 +2,9 @@ function wrapHtml(input, wrapper, extra="") {
     return "<" + wrapper + extra + ">" + input + "</" + wrapper + ">";
 }
 
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://symmetricalos.github.io/feeds/rss.xml");
 
-	var d;
-
-	var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://symmetricalos.github.io/feeds/rss.xml");
-
-	$.getJSON(reqURL,
-							function (rss) {
+$.getJSON(reqURL,function (rss) {
 								
 								var buffer = "";
 								buffer = buffer + wrapHtml(rss.title, "h1");
@@ -25,8 +21,6 @@ function wrapHtml(input, wrapper, extra="") {
 								document.getElementByID("news2").innerHTML = buffer;
 							}
 						);
-
-	return d;
 
 
 
