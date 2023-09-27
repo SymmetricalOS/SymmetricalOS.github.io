@@ -8,7 +8,7 @@ var reqURL =
 
 $.getJSON(reqURL, function (rss) {
 	var buffer = "";
-	buffer = buffer + wrapHtml(rss.title, "h1");
+	buffer = buffer + wrapHtml(rss.feed.title, "h1");
 	const items = rss.items;
 
 	console.log(rss);
@@ -16,7 +16,10 @@ $.getJSON(reqURL, function (rss) {
 	for (const item of items) {
 		var title = wrapHtml(item.title, "h2");
 		var content = wrapHtml(item.content, "p");
-		var sub = wrapHtml("Published by " + item.author, "small");
+		var sub = wrapHtml(
+			"Published by " + item.author + " on " + item.pubDate,
+			"small"
+		);
 		buffer = buffer + wrapHtml(title + content + sub, "div");
 	}
 	document.getElementById("news2").innerHTML = buffer;
