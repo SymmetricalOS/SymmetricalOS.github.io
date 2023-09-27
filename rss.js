@@ -14,7 +14,11 @@ $.getJSON(reqURL, function (rss) {
 	console.log(rss);
 
 	for (const item of items) {
-		var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
+		if (item.link == "") {
+			var title = wrapHtml(item.title, "h2");
+		} else {
+			var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
+		}
 		var content = wrapHtml(item.content, "p");
 		var sub = wrapHtml(
 			"Published by " + item.author + " on " + item.pubDate,
