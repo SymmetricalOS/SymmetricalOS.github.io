@@ -3,9 +3,8 @@ function wrapHtml(input, wrapper, extra="") {
 }
 
 async function rssToJson(feedLink) {
-    const h = fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedLink), {mode: "no-cors"})
+    return fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedLink), {mode: "no-cors"})
 		.then((response) => {return response.json();});
-    return h;
 }
 
 var rss = rssToJson("https://symmetricalos.github.io/feeds/rss.xml");
