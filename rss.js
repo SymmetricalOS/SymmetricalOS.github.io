@@ -22,7 +22,7 @@ function wrapHtml(input, wrapper, extra="") {
     								var sub = wrapHtml("Published by " + item.author.name, "small");
     								buffer = buffer + wrapHtml(title + content + sub, "div");
 								}
-								document.write(buffer);
+								document.getElementByID("news2").innerHTML = buffer;
 							}
 						);
 
