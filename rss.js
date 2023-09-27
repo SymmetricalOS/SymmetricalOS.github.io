@@ -4,7 +4,7 @@ function wrapHtml(input, wrapper, extra="") {
 
 async function rssToJson(feedLink) {
     const h = await fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedLink), {mode: "no-cors"});
-    const dt = h.json();
+    const dt = JSON.parse(h.text());
     return dt;
 }
 
