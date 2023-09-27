@@ -3,8 +3,18 @@ function wrapHtml(input, wrapper, extra="") {
 }
 
 async function rssToJson(feedLink) {
-    return fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedLink), {mode: "no-cors"})
-		.then((response) => {return response.json();});
+	var d;
+
+	var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedLink);
+
+	$.getJSON(reqURL,
+							function (data) {
+								
+								d = data;
+							}
+						);
+
+	return d;
 }
 
 var rss = rssToJson("https://symmetricalos.github.io/feeds/rss.xml");
