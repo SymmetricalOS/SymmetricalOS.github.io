@@ -5,6 +5,12 @@
 		<title>Symmetrical OS News Feed</title>
 		<description>Symmetrical OS News Feed</description>
 		<item>
+			<title>Symmetrical OS Copper Development Update #3 - Whoops!</title>
+			<description>We've been having some issues with the installer, but we're making progress! Mainly, we're rewriting it in Python. Stay cool!</description>
+			<pubDate>2023-09-28 11:18 UTC</pubDate>
+			<author></author>
+		</item>
+		<item>
 			<title>Symmetrical OS Copper Development Update #2</title>
 			<description>The installer ISO is almost done! There are some issues here and there that
 				need to be fixed before the release.</description>
