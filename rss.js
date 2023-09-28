@@ -8,7 +8,7 @@ var reqURL =
 
 $.getJSON(reqURL, function (rss) {
 	var buffer = "";
-	buffer = buffer + wrapHtml(rss.feed.title, "h1")
+	//buffer = buffer + wrapHtml(rss.feed.title, "h1")
 	const items = rss.items;
 
 	console.log(rss);
