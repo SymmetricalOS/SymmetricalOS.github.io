@@ -5,6 +5,12 @@
 		<title>Symmetrical OS News Feed</title>
 		<description>Symmetrical OS News Feed</description>
 		<item>
+			<title>Core repository is finished!</title>
+			<description>Escam's core repository now has all of the packages from the Arch Linux core repository. You will not be able to use these packages for a while because it's gonna take a bit of time to add everything the the database file.</description>
+			<pubDate>2023-09-28 20:37 UTC</pubDate>
+			<author>SidGames5</author>
+		</item>
+		<item>
 			<title>Escam is almost ready!</title>
 			<description>Our package manager, escam, is almost ready for release! In terms of features, everything is complete. There are just a couple bugs we need to work out. We will not be using escam as the main package manager in SymmOS until the entire Arch Linux core and extra repositories are converted to escam-compatible repositories.</description>
 			<pubDate>2023-09-28 13:40 UTC</pubDate>
