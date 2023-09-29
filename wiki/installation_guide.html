@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Installation guide - Symmetrical OS Wiki</title>
+		<style>
+			blockquote {
+				background: #f4f4f4;
+								border: 1px solid #ddd;
+								border-left: 3px solid #f36d33;
+								color: #666;
+								page-break-inside: avoid;
+								font-family: monospace;
+								font-size: 15px;
+								line-height: 1.6;
+								margin-bottom: 1.6em;
+								max-width: 100%;
+								overflow: auto;
+								padding: 1em 1.5em;
+								display: block;
+								word-wrap: break-word;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Installation guide</h1>
+		<div>
+			<h2 id="1">1 - Preparation</h2>
+			<div>
+				<h3 id="1.1">1.1 - Acquire an installation image</h3>
+				<p>
+					Visit the
+					<a href="../download/index.html">Downloads</a> page and
+					download the ISO file.
+				</p>
+			</div>
+			<div>
+				<h3 id="1.2">1.2 - Verify checksum</h3>
+				<p>
+					Obtain the MD5 checksum from the checksums section of the
+					downloads page.<br />
+					<br />
+					Install <code>md5sum</code> from your package manager. Then
+					run the following command<br />
+					<blockquote>
+						md5sum /path/to/installer.iso
+					</blockquote><br>
+					Ensure that the checksum outputted by the command matches what is displayed in the website.
+				</p>
+			</div>
+			<div>
+				<h3 id="1.3">1.3 - Prepare an installation medium</h3>
+				<p>
+					The installation image can be supplied to the target machine via a USB flash drive or DVD.
+				</p>
+			</div>
+			<div>
+				<h3 id="1.4">1.4 - Boot into the system</h3>
+				<p>
+					Turn on the system with the installation medium attached and open up the boot menu. This is typically done with the F2 or DEL key. Select the installation medium.
+				</p>
+			</div>
+			<div>
+				<h3 id="1.5">1.5 - Verify internet connection</h3>
+				<p>
+					To test your internet connectivity and DNS providers, run the following command<br>
+					<blockquote>
+						ping symmetricalos.github.io
+					</blockquote><br>
+					If you get a response, you are connected to the internet and your DNS providers are working.<br>
+					If you do not get a response, you will need to connect to the internet:
+					<ul>
+						<li>Ethernet - plug in the cable.</li>
+						<li>Wi-Fi - authenticate to the wireless network using <code>iwctl</code>.</li>
+						<li>Mobile broadband modem - connect to the mobile network with the <code>mmcli</code> utility.</li>
+					</ul>
+				</p>
+			</div>
+			<div>
+				<h3 id="1.6">1.6 - Sync the system clock</h3>
+				<p>
+					You can use the following command to make sure that your time is synced
+					<blockquote>
+						timedatectl set-ntp true
+					</blockquote>
+				</p>
+			</div>
+		</div>
+		<div>
+			<h2 id="2">2 - Setting up the disks</h2>
+			<div>
+				<h3 id="2.1">2.1 - Partition the disks</h3>
+				<p>
+					List all of the available devices using the <code>lsblk</code> command.<br>
+					<br>
+					Find the block device for the drive you would like to use.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
