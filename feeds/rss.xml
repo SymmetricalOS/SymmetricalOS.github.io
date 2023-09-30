@@ -5,6 +5,12 @@
 		<title>Symmetrical OS News Feed</title>
 		<description>Symmetrical OS News Feed</description>
 		<item>
+			<title>Symmetrical OS Installer Development Update #3 - TK</title>
+			<description>I have a love-hate relationship with Tkinter. On one hand, it's simple and works well, but on the other hand, it's also been a giant pain.</description>
+			<pubDate>2023-09-29 00:54 UTC</pubDate>
+			<author>LeWolfYT</author>
+		</item>
+		<item>
 			<title>Core repository is finished!</title>
 			<description>Escam's core repository now has all of the packages from the Arch Linux core repository. You will not be able to use these packages for a while because it's gonna take a bit of time to add everything the the database file.</description>
 			<pubDate>2023-09-28 20:37 UTC</pubDate>
