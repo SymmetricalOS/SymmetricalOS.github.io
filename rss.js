@@ -15,7 +15,7 @@ $.getJSON(reqURL, function (rss) {
 
 	for (const item of items) {
 		if (item.link == "") {
-			var title = wrapHtml(item.title, "h2");
+			var title = wrapHtml(item.title, "h2", " title=\"" + item.guid + "\"");
 		} else {
 			var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
 		}
