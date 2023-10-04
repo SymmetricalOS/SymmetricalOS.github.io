@@ -3,12 +3,12 @@ function wrapHtml(input, wrapper, extra = "") {
 }
 
 var reqURL =
-	"https://api.rss2json.com/v1/api.json?rss_url=" +
+	"https://www.toptal.com/developers/feed2json/convert?url=" +
 	encodeURIComponent("https://symmetricalos.github.io/feeds/rss.xml");
 
 $.getJSON(reqURL, function (rss) {
 	var buffer = "";
-	//buffer = buffer + wrapHtml(rss.feed.title, "h1")
+	//buffer = buffer + wrapHtml(rss.title, "h1")
 	const items = rss.items;
 
 	console.log(rss);
