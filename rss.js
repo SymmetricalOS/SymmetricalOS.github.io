@@ -11,14 +11,7 @@ $.ajax({
     url: "https://symmetricalos.github.io/feeds/rss.xml",
     dataType: "xml",
     success: function(xml) {
-      $(xml).find("football_player").each(function () {
-        $("table tbody").append("<tr>");
-        $("table tbody").append("<td>" + $(this).find("name").text() + "</td>");
-        $("table tbody").append("<td>" + $(this).find("club").text() + "</td>");
-        $("table tbody").append("<td>" + $(this).find("number").text() + "</td>");
-        $("table tbody").append("<td>" + $(this).find("country").text() + "</td>");
-        $("table tbody").append("</tr>");           
-      });
+      
 		var buffer = "";
 	//buffer = buffer + wrapHtml(rss.title, "h1")
 	const items = $(xml).find(items);
