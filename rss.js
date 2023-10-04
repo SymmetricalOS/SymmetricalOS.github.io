@@ -3,40 +3,12 @@ function wrapHtml(input, wrapper, extra = "") {
 }
 
 var reqURL =
-	"https://www.toptal.com/developers/feed2json/convert?url=" +
+	"https://api.rss2json.com/v1/api.json?rss_url=" +
 	encodeURIComponent("https://symmetricalos.github.io/feeds/rss.xml");
 
-$.ajax({
-    type: "GET",
-    url: "https://symmetricalos.github.io/feeds/rss.xml",
-    dataType: "xml",
-    success: function(xml) {
-      
-		var buffer = "";
-	//buffer = buffer + wrapHtml(rss.title, "h1")
-	const items = $(xml).find(items);
-
-	console.log(rss);
-
-	
-	$(xml).find(items).each(function() {if (item.link == "") {
-			var title = wrapHtml(item.title, "h2", " title=\"" + item.guid + "\"");
-		} else {
-			var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
-		}
-		var content = wrapHtml(item.content_html, "p");
-		var sub = wrapHtml(
-			"Published by " + item.author.name + " on " + item.date_published,
-			"small"
-		);
-		buffer = buffer + wrapHtml(title + content + sub, "div");});
-	document.getElementById("news2").innerHTML = buffer;
-    }
-  });
-
-/*$.getJSON(reqURL, function (rss) {
+$.getJSON(reqURL, function (rss) {
 	var buffer = "";
-	//buffer = buffer + wrapHtml(rss.title, "h1")
+	//buffer = buffer + wrapHtml(rss.feed.title, "h1")
 	const items = rss.items;
 
 	console.log(rss);
@@ -47,13 +19,12 @@ $.ajax({
 		} else {
 			var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
 		}
-		var content = wrapHtml(item.content_html, "p");
+		var content = wrapHtml(item.content, "p");
 		var sub = wrapHtml(
-			"Published by " + item.author.name + " on " + item.date_published,
+			"Published by " + item.author + " on " + item.pubDate,
 			"small"
 		);
 		buffer = buffer + wrapHtml(title + content + sub, "div");
 	}
 	document.getElementById("news2").innerHTML = buffer;
 });
-*/
