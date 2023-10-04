@@ -3,7 +3,7 @@ function wrapHtml(input, wrapper, extra = "") {
 }
 
 var reqURL =
-	"https://www.toptal.com/developers/feed2json/convert?url=" +
+	"https://api.rss2json.com/v1/api.json?rss_url=" +
 	encodeURIComponent("https://symmetricalos.github.io/feeds/rss.xml");
 
 $.ajax({
