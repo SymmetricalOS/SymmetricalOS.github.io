@@ -34,7 +34,7 @@ $.ajax({
 			}
 			var content = wrapHtml(item.content, "p");
 			var sub = wrapHtml(
-				"Published by " + item.author + " on " + item.pubDate,
+				"Published by " + item.author + " on " + item.pubDate + " UTC",
 				"small"
 			);
 			buffer = buffer + wrapHtml(title + content + sub, "div");
