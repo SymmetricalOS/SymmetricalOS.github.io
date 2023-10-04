@@ -21,7 +21,7 @@ $.ajax({
 	//},
 	success: function (rss) {
 		var buffer = "";
-		//buffer = buffer + wrapHtml(rss.title, "h1")
+		//buffer = buffer + wrapHtml(rss.feed.title, "h1")
 		const items = rss.items;
 
 		console.log(rss);
@@ -34,7 +34,7 @@ $.ajax({
 			}
 			var content = wrapHtml(item.content_html, "p");
 			var sub = wrapHtml(
-				"Published by " + item.author.name + " on " + item.date_published,
+				"Published by " + item.author + " on " + item.pubDate,
 				"small"
 			);
 			buffer = buffer + wrapHtml(title + content + sub, "div");
