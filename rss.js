@@ -19,9 +19,9 @@ $.getJSON(reqURL, function (rss) {
 		} else {
 			var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
 		}
-		var content = wrapHtml(item.content, "p");
+		var content = wrapHtml(item.content_html, "p");
 		var sub = wrapHtml(
-			"Published by " + item.author + " on " + item.pubDate,
+			"Published by " + item.author.name + " on " + item.date_published,
 			"small"
 		);
 		buffer = buffer + wrapHtml(title + content + sub, "div");
