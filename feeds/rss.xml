@@ -5,6 +5,13 @@
 		<title>Symmetrical OS News Feed</title>
 		<description>Symmetrical OS News Feed</description>
 		<item>
+			<title>Symmetrical OS Development Update</title>
+			<description>Our update utility is complete! We are in the process of testing the app. Once that is all done it will be ready to ship in the first version of Symmetrical OS.</description>
+			<pubDate>2023-10-04 12:18 UTC</pubDate>
+			<guid isPermaLink="false">99c55374-1a09-4326-84af-608f21df21ec</guid>
+			<author>SidGames5</author>
+		</item>
+		<item>
 			<title>Symmetrical OS Installer Development Update #4 - TK</title>
 			<description>I have a love-hate relationship with Tkinter. On one hand, it's simple and works well, but on the other hand, it's also been a giant pain.</description>
 			<pubDate>2023-09-29 00:54 UTC</pubDate>
