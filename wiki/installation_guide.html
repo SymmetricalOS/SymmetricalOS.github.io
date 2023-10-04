@@ -44,7 +44,7 @@
 						Install <code>md5sum</code> from your package manager. Then
 						run the following command<br />
 					<blockquote>
-						md5sum /path/to/installer.iso
+						$ md5sum /path/to/installer.iso
 					</blockquote><br>
 					Ensure that the checksum outputted by the command matches what is displayed in the website.
 					</p>
@@ -66,7 +66,7 @@
 					<p>
 						To test your internet connectivity and DNS providers, run the following command<br>
 					<blockquote>
-						ping symmetricalos.github.io
+						# ping symmetricalos.github.io
 					</blockquote><br>
 					If you get a response, you are connected to the internet and your DNS providers are working.<br>
 					If you do not get a response, you will need to connect to the internet:
@@ -82,7 +82,7 @@
 					<p>
 						You can use the following command to make sure that your time is synced
 					<blockquote>
-						timedatectl set-ntp true
+						# timedatectl set-ntp true
 					</blockquote>
 					</p>
 				</div>
@@ -106,9 +106,9 @@
 						<br>
 						You can format the partitions with these commands<br>
 					<blockquote>
-						mkfs.fat -F 32 /dev/boot_partition<br>
-						mkfs.ext4 /dev/root_partition<br>
-						mkfs.ext4 /dev/home_partition
+						# mkfs.fat -F 32 /dev/boot_partition<br>
+						# mkfs.ext4 /dev/root_partition<br>
+						# mkfs.ext4 /dev/home_partition
 					</blockquote>
 					</p>
 				</div>
@@ -117,11 +117,11 @@
 					<p>
 						Once the partitions have been formatted, you need to mount them. This can be done with the following commands<br>
 						<blockquote>
-					mount /dev/root_partition /mnt<br>
-					mkdir /mnt/boot<br>
-					mkdir /mnt/home<br>
-					mount /dev/boot_partition /mnt/boot<br>
-					mount /dev/home_partition /mnt/home
+					# mount /dev/root_partition /mnt<br>
+					# mkdir /mnt/boot<br>
+					# mkdir /mnt/home<br>
+					# mount /dev/boot_partition /mnt/boot<br>
+					# mount /dev/home_partition /mnt/home
 				</blockquote>
 					</p>
 				</div>
@@ -133,7 +133,7 @@
 					<p>
 						To have a functioning linux system, you need the <code>base</code> and <code>base-devel</code> packages.<br>
 					<blockquote>
-						escam t /mnt base base-devel
+					# pacstrap /mnt base base-devel
 					</blockquote>
 					</p>
 				</div>
@@ -142,10 +142,164 @@
 					<p>
 						You will also need to install a linux kernel. There is the standard linux kernel as well as a long-term-support kernel.<br>
 					<blockquote>
-						escam t /mnt linux linux-firmware
+					# pacstrap /mnt linux linux-firmware
 					</blockquote>
 					<blockquote>
-						escam t /mnt linux-lts linux-firmware
+						# pacstrap /mnt linux-lts linux-firmware
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="3.3">3.3 - Generate Fstab</h3>
+					<p>
+						You will need to generate an fstab file to be able to use your system.<br>
+					<blockquote>
+					# genfstab -U /mnt > /mnt/etc/fstab
+					</blockquote>
+				</p>
+			</div>
+			</div>
+			<div>
+				<h2 id="4">4 - Configure the system</h2>
+				<div>
+					<h3 id="4.1">4.1 - Chroot</h3>
+					<p>
+						Change root into the new system.<br>
+					<blockquote>
+						# chroot /mnt
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="4.2">4.2 - Hostname configuration</h3>
+					<p>
+						Set your hostname by editing the <code>/etc/hostname</code> file.<br>
+					<blockquote>
+						<strong>/etc/hostname</strong><br>
+						yourhostname
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="4.3">4.3 - Initramfs</h3>
+					<p>
+						This is not required if you followed <a href="#3.2">step 3.2</a>.<br>
+					<blockquote>
+						# mkinitcpio -P
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="4.4">4.4 - Root password</h3>
+					<p>
+						Set the root password.<br>
+					<blockquote>
+						# passwd
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="4.5">4.5 - Additional users</h3>
+					<p>
+						You can add additional users to your system. This is not required.<br>
+					<blockquote>
+						# useradd -m yourname
+					</blockquote>
+					You should also set a password.<br>
+					<blockquote>
+						# passwd yourname
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="4.6">4.6 - Boot loader</h3>
+					<p>
+						Install <code>grub</code> and <code>efibootmgr</code>.<br>
+					<blockquote>
+						# pacman -S grub efibootmgr
+					</blockquote>
+					Now configure grub.<br>
+					<blockquote>
+						# grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB<br>
+						# grub-mkconfig -o /boot/grub/grub.cfg
+					</blockquote>
+					</p>
+				</div>
+			</div>
+			<div>
+				<h2 id="5">5 - Graphical environment</h2>
+				<div>
+					<h3 id="5.1">5.1 - Install a display server</h3>
+					<p>
+						Symmetrical OS uses <code>xorg</code> for the display server.<br>
+					<blockquote>
+						# pacman -S xorg
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="5.2">5.2 - Install a login screen</h3>
+					<p>
+						You have the choice of <code>lightdm</code> and <code>sddm</code>. Do some research before picking one.<br>
+					<blockquote>
+						# pacman -S lightdm
+						# systemctl enable lightdm.service
+					</blockquote>
+					<blockquote>
+						# pacman -S sddm
+						# systemctl enable sddm.service
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="5.3">5.3 - Install the desktop environment</h3>
+					<p>
+						Symmetrical OS uses the <code>xfce4</code> desktop environment and the <code>xfwm</code> window manager.<br>
+					<blockquote>
+						# pacman -S xfce4 xfce4-goodies
+					</blockquote>
+					</p>
+					<div>
+						<h4 id="5.3.1">5.3.1 - Install a customization</h4>
+						<p>
+							Symmetrical OS has the default customization, a Windows look, and MacOS look.<br>
+						<blockquote>
+							# pacman -S symmos-xfce4-default
+						</blockquote>
+						<blockquote>
+							# pacman -S symmos-xfce4-windows
+						</blockquote>
+						<blockquote>
+							# pacman -S symmos-xfce4-macos
+						</blockquote>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h2 id="6">6 - Finishing up</h2>
+				<div>
+					<h3 id="6.1">6.1 - Exit chroot environment</h3>
+					<p>
+					<blockquote>
+						# exit
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="6.2">6.2 - Unmount all drives</h3>
+					<p>
+					<blockquote>
+						# umount -R /mnt
+					</blockquote>
+					</p>
+				</div>
+				<div>
+					<h3 id="6.3">6.3 - Reboot system</h3>
+					<p>
+						You need to remove the installation medium after rebooting.<br>
+					<blockquote>
+						# reboot
 					</blockquote>
 					</p>
 				</div>
