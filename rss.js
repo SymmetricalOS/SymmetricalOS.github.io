@@ -18,8 +18,8 @@ $.ajax({
 
 	console.log(rss);
 
-	for (const item of items) {
-		if (item.link == "") {
+	
+	$(xml).find(items).each(function() {if (item.link == "") {
 			var title = wrapHtml(item.title, "h2", " title=\"" + item.guid + "\"");
 		} else {
 			var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
@@ -29,8 +29,7 @@ $.ajax({
 			"Published by " + item.author.name + " on " + item.date_published,
 			"small"
 		);
-		buffer = buffer + wrapHtml(title + content + sub, "div");
-	}
+		buffer = buffer + wrapHtml(title + content + sub, "div");});
 	document.getElementById("news2").innerHTML = buffer;
     }
   });
