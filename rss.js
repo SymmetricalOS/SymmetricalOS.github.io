@@ -32,7 +32,7 @@ $.ajax({
 			} else {
 				var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
 			}
-			var content = wrapHtml(item.content_html, "p");
+			var content = wrapHtml(item.content, "p");
 			var sub = wrapHtml(
 				"Published by " + item.author + " on " + item.pubDate,
 				"small"
