@@ -9,6 +9,7 @@ var reqURL =
 $.ajax({
 	type: 'GET',
 	url: reqURL,
+            crossDomain: true,
 	//jsonpCallback: 'jsonCallback',
 	contentType: 'application/json',
 	//async: false,
