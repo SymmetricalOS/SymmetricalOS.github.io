@@ -5,6 +5,13 @@
 		<title>Symmetrical OS News Feed</title>
 		<description>Symmetrical OS News Feed</description>
 		<item>
+			<title>News viewer will now show times in local time zone.</title>
+			<description>The news viewer on the website's home page will now show the time of the post in your local time zone. Previously it would display in UTC.</description>
+			<pubDate>2023-10-05 00:02 UTC</pubDate>
+			<guid isPermaLink="false">e5c5cd13-783a-4aea-b16d-b7b2fab011b9</guid>
+			<author>SidGames5</author>
+		</item>
+		<item>
 			<title>Symmetrical OS Development Update</title>
 			<description>Our update utility is complete! We are in the process of testing the app. Once that is all done it will be ready to ship in the first version of Symmetrical OS.</description>
 			<pubDate>2023-10-04 12:18 UTC</pubDate>
