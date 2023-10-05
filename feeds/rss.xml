@@ -3,7 +3,7 @@
 
 	<channel>
 		<title>Symmetrical OS News Feed</title>
-		<description>Symmetrical OS News Feed</description>
+		<description>Symmetrical OS News Feed</description><item><title>First ISO delay</title><description>We originally planned for the first ISO to be released on October 1st. It will not be available until late October or early November.</description><pubDate>2023-10-05 11:21:01 UTC</pubDate><guid>f2537ec0-80ae-4a23-cd02-2e2e781f</guid><author>SidGames5</author></item><item><title>First release delay</title><description>We originally planned for the first ISO to be available on October 1st. It will probably not be available until late October or early November.</description><pubDate>2023-10-05 11:20:00 UTC</pubDate><guid>3a9c0d46-b065-591c-926f-5b847430</guid><author>SidGames5</author></item>
 		<item>
 			<title>New news writer</title>
 			<description>For a long time we have been manually writing the XML document to add new
