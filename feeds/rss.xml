@@ -6,42 +6,53 @@
 		<description>Symmetrical OS News Feed</description>
 		<item>
 			<title>News viewer will now show times in local time zone.</title>
-			<description>The news viewer on the website's home page will now show the time of the post in your local time zone. Previously it would display in UTC.</description>
+			<description>The news viewer on the website's home page will now show the time of the
+				post in your local time zone. Previously it would display in UTC.</description>
 			<pubDate>2023-10-05 00:02 UTC</pubDate>
 			<guid isPermaLink="false">e5c5cd13-783a-4aea-b16d-b7b2fab011b9</guid>
 			<author>SidGames5</author>
 		</item>
 		<item>
 			<title>Symmetrical OS Development Update</title>
-			<description>Our update utility is complete! We are in the process of testing the app. Once that is all done it will be ready to ship in the first version of Symmetrical OS.</description>
+			<description>Our update utility is complete! We are in the process of testing the app.
+				Once that is all done it will be ready to ship in the first version of Symmetrical
+				OS.</description>
 			<pubDate>2023-10-04 12:18 UTC</pubDate>
 			<guid isPermaLink="false">99c55374-1a09-4326-84af-608f21df21ec</guid>
 			<author>SidGames5</author>
 		</item>
 		<item>
 			<title>Symmetrical OS Installer Development Update #4 - TK</title>
-			<description>I have a love-hate relationship with Tkinter. On one hand, it's simple and works well, but on the other hand, it's also been a giant pain.</description>
+			<description>I have a love-hate relationship with Tkinter. On one hand, it's simple and
+				works well, but on the other hand, it's also been a giant pain.</description>
 			<pubDate>2023-09-29 00:54 UTC</pubDate>
 			<guid isPermaLink="false">si4</guid>
 			<author>LeWolfYT</author>
 		</item>
 		<item>
 			<title>Core repository is finished!</title>
-			<description>Escam's core repository now has all of the packages from the Arch Linux core repository. You will not be able to use these packages for a while because it's gonna take a bit of time to add everything the the database file.</description>
+			<description>Escam's core repository now has all of the packages from the Arch Linux
+				core repository. You will not be able to use these packages for a while because it's
+				gonna take a bit of time to add everything the the database file.</description>
 			<pubDate>2023-09-28 20:37 UTC</pubDate>
 			<guid isPermaLink="false">rp1</guid>
 			<author>SidGames5</author>
 		</item>
 		<item>
 			<title>Escam is almost ready!</title>
-			<description>Our package manager, escam, is almost ready for release! In terms of features, everything is complete. There are just a couple bugs we need to work out. We will not be using escam as the main package manager in SymmOS until the entire Arch Linux core and extra repositories are converted to escam-compatible repositories.</description>
+			<description>Our package manager, escam, is almost ready for release! In terms of
+				features, everything is complete. There are just a couple bugs we need to work out.
+				We will not be using escam as the main package manager in SymmOS until the entire
+				Arch Linux core and extra repositories are converted to escam-compatible
+				repositories.</description>
 			<pubDate>2023-09-28 13:40 UTC</pubDate>
 			<author>SidGames5</author>
 			<guid isPermaLink="false">esc1</guid>
 		</item>
 		<item>
 			<title>Symmetrical OS Installer Development Update #3 - Whoops!</title>
-			<description>We've been having some issues with the installer, but we're making progress! Mainly, we're rewriting it in Python. Stay cool!</description>
+			<description>We've been having some issues with the installer, but we're making
+				progress! Mainly, we're rewriting it in Python. Stay cool!</description>
 			<pubDate>2023-09-28 11:18 UTC</pubDate>
 			<guid isPermaLink="false">si3</guid>
 			<author>LeWolfYT</author>
