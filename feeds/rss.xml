@@ -5,6 +5,15 @@
 		<title>Symmetrical OS News Feed</title>
 		<description>Symmetrical OS News Feed</description>
 		<item>
+			<title>New news writer</title>
+			<description>For a long time we have been manually writing the XML document to add new
+				items to the news feed. We finally have a dedicated tool for writing new news
+				articles!</description>
+			<pubDate>2023-10-05 01:19:56 UTC</pubDate>
+			<guid>21433c31-92b3-7e72-ddfa-8df6b814</guid>
+			<author>SidGames5</author>
+		</item>
+		<item>
 			<title>News viewer will now show times in local time zone.</title>
 			<description>The news viewer on the website's home page will now show the time of the
 				post in your local time zone. Previously it would display in UTC.</description>
