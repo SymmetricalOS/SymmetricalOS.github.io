@@ -8,32 +8,26 @@ var reqURL =
 
 $.ajax({
 	type: 'GET',
-	url: reqURL,
-            crossDomain: true,
-	//jsonpCallback: 'jsonCallback',
-	contentType: 'application/json',
-	//async: false,
-	//dataType: 'jsonp',
-
-	//xhrFields: { 
-	// for CORS?
-	//  withCredentials: false
-	//},
-	success: function (rss) {
+	url: "feeds/rss.xml",
+	crossDomain: true,
+	dataType: 'XML',
+	success: function (xml) {
+		var x2js = new X2JS();
+		var rss = x2js.xml2json(xml).rss.channel;
 		var buffer = "";
 		//buffer = buffer + wrapHtml(rss.feed.title, "h1")
-		const items = rss.items;
+		const items = rss.item;
 
 		console.log(rss);
 
 		for (const item of items) {
-			if (item.link == "") {
+			if (item.link == "" || item.link == null) {
 				var title = wrapHtml(item.title, "h2", " title=\"" + item.guid + "\"");
 			} else {
 				var title = wrapHtml(wrapHtml(item.title, "h2"), "a", " href=\"" + item.link + "\"");
 			}
-			var content = wrapHtml(item.content, "p");
-			var time = item.pubDate;
+			var content = wrapHtml(item.description, "p");
+			var time = item.pubDate.substring(0, item.pubDate.length - 4);
 			var options = {
 				year: 'numeric', month: 'numeric', day: 'numeric',
 				hour: 'numeric', minute: 'numeric', second: 'numeric'
