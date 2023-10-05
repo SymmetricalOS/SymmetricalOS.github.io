@@ -2,10 +2,6 @@ function wrapHtml(input, wrapper, extra = "") {
 	return "<" + wrapper + extra + ">" + input + "</" + wrapper + ">";
 }
 
-var reqURL =
-	"https://api.rss2json.com/v1/api.json?rss_url=" +
-	encodeURIComponent("https://symmetricalos.github.io/feeds/rss.xml");
-
 $.ajax({
 	type: 'GET',
 	url: "feeds/rss.xml",
