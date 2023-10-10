@@ -20,8 +20,8 @@ $.ajax({
 		for (const item of items) {
       var version = wrapHtml(item.version, "th");
 			var size = wrapHtml(item.size, "th");
-			var sha = wrapHtml(item.sha, "th");
-      var mdsum = wrapHtml(item.mdsum, "th");
+			var sha = wrapHtml(item.sha1, "th");
+      var md5sum = wrapHtml(item.md5sum, "th");
 			buffer = buffer + wrapHtml(title + content + sub, "tr");
 		}
 		document.getElementById("stuffs").innerHTML = buffer;
