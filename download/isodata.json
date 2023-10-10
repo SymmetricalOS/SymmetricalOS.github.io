@@ -1,9 +1,9 @@
-{
-  "info": [
+[
     {
       "version": "TableGen Test",
       "size": "404 MB",
-      "sha": "SHA Example",
-      "mdsum": "MD5 example"
+      "sha1": "SHA Example",
+      "md5": "MD5 example",
+		"maglink": "",
+		"torrent": ""}
   ]
-}
