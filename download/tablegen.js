@@ -11,7 +11,8 @@ $.ajax({
     //i know i'm lazy and stole this code from the rss reader
 		var buffer = "";
 		//buffer = buffer + wrapHtml(rss.feed.title, "h1")
-		const items = JSON.parse(json).info;
+		//const items = JSON.parse(json).info;
+		const items = json.info
 
     buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-256 hash", "th") + wrapHtml("MD5 hash", "th"), "tr");
 
