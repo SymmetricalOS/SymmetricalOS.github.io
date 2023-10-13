@@ -22,7 +22,7 @@ $.ajax({
       var version = wrapHtml(item.version, "th");
 			var size = wrapHtml(item.size, "th");
 			var sha = wrapHtml(item.sha1, "th");
-      var md5sum = wrapHtml(item.md5sum, "th");
+      var md5sum = wrapHtml(item.mdsum, "th");
 			buffer = buffer + wrapHtml(version + size + sha + md5sum, "tr");
 		}
 		document.getElementById("stuffs").innerHTML = buffer;
