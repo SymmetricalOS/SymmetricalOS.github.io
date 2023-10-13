@@ -3,7 +3,16 @@
 
 	<channel>
 		<title>Symmetrical OS News Feed</title>
-		<description>Symmetrical OS News Feed</description><item><title>We are making a file manager!</title><description>We have just started development on a new file manager. Eventually this will replace Thunar included with XFCE4.</description><pubDate>2023-10-10 21:33:33 UTC</pubDate><guid>82ba0f5f-fe7f-98ee-e28a-79f46867</guid><author>SidGames5</author></item><item><title>First release delay</title><description>We originally planned for the first ISO to be available on October 1st. It will probably not be available until late October or early November.</description><pubDate>2023-10-05 11:20:00 UTC</pubDate><guid>3a9c0d46-b065-591c-926f-5b847430</guid><author>SidGames5</author></item>
+		<description>Symmetrical OS News Feed</description>
+		<item>
+			<title>Symmetrical OS Installer Development Update #5 - So close</title>
+			<description>Symmetrical OS will be available soon... if I have enough motivation.</description>
+			<pubDate>2023-10-13 12:18 UTC</pubDate>
+			<guid isPermaLink="false">si5</guid>
+			<author>LeWolfYT</author>
+		</item>
+		<item><title>We are making a file manager!</title><description>We have just started development on a new file manager. Eventually this will replace Thunar included with XFCE4.</description><pubDate>2023-10-10 21:33:33 UTC</pubDate><guid>82ba0f5f-fe7f-98ee-e28a-79f46867</guid><author>SidGames5</author></item><item><title>First release delay</title><description>We originally planned for the first ISO to be available on October 1st. It will probably not be available until late October or early November.</description><pubDate>2023-10-05 11:20:00 UTC</pubDate><guid>3a9c0d46-b065-591c-926f-5b847430</guid><author>SidGames5</author></item>
+		
 		<item>
 			<title>New news writer</title>
 			<description>For a long time we have been manually writing the XML document to add new
