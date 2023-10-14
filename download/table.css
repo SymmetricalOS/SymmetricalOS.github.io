@@ -1,0 +1,15 @@
+tr:nth-child(even) {
+	background-color: rgba(255,140,0, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+	background-color: rgba(255,140,0, 0.4);
+}
+
+th {
+	font-weight: bolder;
+}
+
+tr {
+	font-weight: normal;
+}

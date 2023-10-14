@@ -25,6 +25,6 @@ $.ajax({
       var md5sum = wrapHtml(item.mdsum, "th");
 			buffer = buffer + wrapHtml(version + size + sha + md5sum, "tr");
 		}
-		document.getElementById("stuffs").innerHTML = buffer;
+		document.getElementById("vertable").innerHTML = buffer;
 	}
 })
