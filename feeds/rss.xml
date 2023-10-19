@@ -2,6 +2,13 @@
 <rss version="2.0">
 	<channel>
 		<title>Symmetrical OS News Feed</title>
+		<item>
+			<title>Random Filler to Appease the Two People Who See This</title>
+			<description>Wait... If the RSS feed on the website is just HTML then... \<span\>\<img src="https://static.wikia.nocookie.net/pizzatower/images/3/34/Noiseidle.gif"\>\</img\>\</span\></description>
+			<pubDate>2023-10-19 20:24 UTC</pubDate>
+			<guid isPermaLink="false">random1</guid>
+			<author>LeWolfYT</author>
+		</item>
 		<description>Symmetrical OS News Feed</description><item><title>First ISO is almost working</title><description>The new new installer written in python is complete! We have begun VM testing and will soon begin hardware testing. Once all of that is done, it will be released to the public as the first ISO of Symmetrical OS.</description><pubDate>2023-10-17 00:00:55 UTC</pubDate><guid>c4c2e448-f192-8ed8-0a2b-02b76dc8</guid><author>SidGames5</author></item>
 		<item>
 			<title>Symmetrical OS Installer Development Update #5 - So close</title>
