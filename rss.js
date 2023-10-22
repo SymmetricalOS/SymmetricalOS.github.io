@@ -34,7 +34,7 @@ $.ajax({
 				"Published by " + item.author + " on " + localtime + " local time",
 				"small"
 			);
-			buffer = wrapHtml(wrapHtml(title, "summary") + buffer + wrapHtml(title + content + sub, "div"), "details")
+			buffer = buffer + wrapHtml(wrapHtml(item.title, "summary") + wrapHtml(title + content + sub, "div"), "details")
 		}
 		document.getElementById("news2").innerHTML = buffer;
 	}
