@@ -9,7 +9,7 @@ $.ajax({
 	dataType: 'XML',
 	success: function (xml) {
 		var x2js = new X2JS();
-		var rss = x2js.xml2json(xml).rss.channel;
+		var rss = x2js.xml2json(xml.replace(/&(?!(?:apos|quot|[gl]t|amp);|#)/g, '&amp;')).rss.channel;
 		var buffer = "";
 		//buffer = buffer + wrapHtml(rss.feed.title, "h1")
 		const items = rss.item;
