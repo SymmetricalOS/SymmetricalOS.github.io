@@ -2,13 +2,7 @@
 <rss version="2.0">
 	<channel>
 		<title>Symmetrical OS News Feed</title>
-		<item>
-			<title>Before I forget...</title>
-			<description>Symmetrical OS is almost ready! Also, here. Have an image. I think.&lt;span&gt;&lt;img src="https://win98icons.alexmeub.com/icons/png/internet_connection_wiz-4.png"&gt;&lt;/img&gt;&lt;/span&gt;</description>
-			<pubDate>2023-10-21 00:49 UTC</pubDate>
-			<guid isPermaLink="false">si6</guid>
-			<author>LeWolfYT</author>
-		</item><item><title>Oh no, I forgot my password!</title><description>The installer is almost done. In fact so close that it would be possible to release it now! However, you can't log in to the new system. We have tried all sorts of methods of setting the user's password but no matter what we do, it will not work.</description><pubDate>2023-10-23 20:12:56 UTC</pubDate><guid>6168d27e-cf80-21f5-5bda-57dd019f</guid><author>SidGames5</author></item>
+		<item><title>Oh no, I forgot my password!</title><description>The installer is almost done. In fact so close that it would be possible to release it now! However, you can't log in to the new system. We have tried all sorts of methods of setting the user's password but no matter what we do, it will not work.</description><pubDate>2023-10-23 20:12:56 UTC</pubDate><guid>6168d27e-cf80-21f5-5bda-57dd019f</guid><author>SidGames5</author></item>
 		<item>
 			<title>Sid, I'm Disappointed In You (not really)</title>
 			<description>You know, you could have asked me and I would have helped you with the dependencies.&lt;span style="visibility: hidden;"&gt;hey you, the inspect element guys. don't tell anybody. i'm hiding here in the code&lt;/span&gt;</description>
