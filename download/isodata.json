@@ -1,19 +1,14 @@
 {
 	"info": [
 		{
-			"version": "TableGen Test",
-			"size": "404 MB",
-			"sha1": "SHA Example",
-			"md5": "MD5 example",
+			"version": "2023.11.01",
+			"type": "Online",
+			"size": "565 MB",
+			"sha1": "N/A",
+			"md5": "N/A",
 			"maglink": "",
-			"torrent": ""
-		},{
-			"version": "TableGen Test",
-			"size": "404 MB",
-			"sha1": "SHA Example",
-			"md5": "MD5 example",
-			"maglink": "",
-			"torrent": ""
+			"torrent": "",
+			"file": ""
 		}
 	]
 }
