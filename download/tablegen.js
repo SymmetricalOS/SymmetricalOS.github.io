@@ -23,11 +23,14 @@ $.ajax({
 			var size = wrapHtml(item.size, "td");
 			var sha = wrapHtml(item.sha1, "td");
       var md5sum = wrapHtml(item.md5, "td");
-			if (item.file == "N/A") {
-				var file = wrapHtml(wrapHtml("Torrent", "a", " href=" + item.torrent), "td");
-			} else {
-				var file = wrapHtml(wrapHtml("Direct download", "a", " href=" + item.file) + wrapHtml("Torrent", "a", " href=" + item.torrent), "td");
+			var file = "";
+			if (item.file != "N/A") {
+				var file += wrapHtml("File", "a", " href=" + item.file);
 			}
+			if (item.torrent != "N/A") {
+				var file += wrapHtml("Torrent", "a", " href=" + item.torrent);
+			}
+			file = wrapHtml(file, "td");
 			buffer = buffer + wrapHtml(version + size + sha + md5sum + file, "tr");
 		}
 		document.getElementById("vertable").innerHTML = buffer;
