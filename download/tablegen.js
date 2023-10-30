@@ -14,7 +14,7 @@ $.ajax({
 		//const items = JSON.parse(json).info;
 		const items = json.info
 
-    buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-256 hash", "th") + wrapHtml("MD5 hash", "th") + wrapHtml("Download", "th"), "tr");
+    buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-1 hash", "th") + wrapHtml("MD5 hash", "th") + wrapHtml("Download", "th"), "tr");
 
 		console.log(json);
 
