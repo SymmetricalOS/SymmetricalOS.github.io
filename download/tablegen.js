@@ -24,10 +24,10 @@ $.ajax({
 			var sha = wrapHtml(item.sha1, "td");
       var md5sum = wrapHtml(item.md5, "td");
 			var file = "";
-			if (item.file != "N/A") {
+			if (item.file != "") {
 				file += wrapHtml("File", "a", " href=" + item.file);
 			}
-			if (item.torrent != "N/A") {
+			if (item.torrent != "") {
 				file += wrapHtml("Torrent", "a", " href=" + item.torrent);
 			}
 			file = wrapHtml(file, "td");
