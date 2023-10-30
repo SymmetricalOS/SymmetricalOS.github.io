@@ -14,16 +14,17 @@ $.ajax({
 		//const items = JSON.parse(json).info;
 		const items = json.info
 
-    buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-256 hash", "th") + wrapHtml("MD5 hash", "th"), "tr");
+    buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-256 hash", "th") + wrapHtml("MD5 hash", "th") + wrapHtml("Download", "th"), "tr");
 
 		console.log(json);
 
 		for (const item of items) {
-      var version = wrapHtml(item.version, "th");
-			var size = wrapHtml(item.size, "th");
-			var sha = wrapHtml(item.sha1, "th");
-      var md5sum = wrapHtml(item.md5, "th");
-			buffer = buffer + wrapHtml(version + size + sha + md5sum, "tr");
+      var version = wrapHtml(item.version, "td");
+			var size = wrapHtml(item.size, "td");
+			var sha = wrapHtml(item.sha1, "td");
+      var md5sum = wrapHtml(item.md5, "td");
+			var file = wrapHtml(item.file, "td");
+			buffer = buffer + wrapHtml(version + size + sha + md5sum + file, "tr");
 		}
 		document.getElementById("vertable").innerHTML = buffer;
 	}
