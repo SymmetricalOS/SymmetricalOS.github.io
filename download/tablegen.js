@@ -23,7 +23,7 @@ $.ajax({
 			var size = wrapHtml(item.size, "td");
 			var sha = wrapHtml(item.sha1, "td");
       var md5sum = wrapHtml(item.md5, "td");
-			var file = wrapHtml(item.file, "td");
+			var file = wrapHtml(wrapHtml("Direct download", "a", " href=" + item.file), "td");
 			buffer = buffer + wrapHtml(version + size + sha + md5sum + file, "tr");
 		}
 		document.getElementById("vertable").innerHTML = buffer;
