@@ -28,6 +28,9 @@ $.ajax({
 				file += wrapHtml("File", "a", " href=" + item.file);
 			}
 			if (item.torrent != "") {
+				if (file != "") {
+					file += " ";
+				}
 				file += wrapHtml("Torrent", "a", " href=" + item.torrent);
 			}
 			file = wrapHtml(file, "td");
