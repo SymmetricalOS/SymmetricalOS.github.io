@@ -14,12 +14,14 @@ $.ajax({
 		//const items = JSON.parse(json).info;
 		const items = json.info
 
-    buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-1 hash", "th") + wrapHtml("MD5 hash", "th") + wrapHtml("Download", "th"), "tr");
+    buffer = buffer + wrapHtml(wrapHtml("Installer Version", "th") + wrapHtml("Kernel", "th") + wrapHtml("SymmOS Version", "th") + wrapHtml("File Size", "th") + wrapHtml("SHA-1 hash", "th") + wrapHtml("MD5 hash", "th") + wrapHtml("Download", "th"), "tr");
 
 		console.log(json);
 
 		for (const item of items) {
-      var version = wrapHtml(item.version, "td");
+      		var version = wrapHtml(item.version, "td");
+			var kernel = wrapHtml(item.kernel, "td");
+			var symmos = wrapHtml(item.symmosver, "td);
 			var size = wrapHtml(item.size, "td");
 			var sha = wrapHtml(item.sha1, "td");
       var md5sum = wrapHtml(item.md5, "td");
@@ -34,7 +36,7 @@ $.ajax({
 				file += wrapHtml("Torrent", "a", " href=" + item.torrent);
 			}
 			file = wrapHtml(file, "td");
-			buffer = buffer + wrapHtml(version + size + sha + md5sum + file, "tr");
+			buffer = buffer + wrapHtml(version + kernel + symmos + size + sha + md5sum + file, "tr");
 		}
 		document.getElementById("vertable").innerHTML = buffer;
 	}
