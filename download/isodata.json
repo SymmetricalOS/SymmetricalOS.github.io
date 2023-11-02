@@ -2,7 +2,7 @@
 	"info": [
 		{
 			"version": "2023.11.01",
-			"kernel": "6.5.9",
+			"kernel": "latest",
 			"symmosver": "latest",
 			"type": "Online",
 			"size": "564.3 MiB",
