@@ -21,7 +21,7 @@ $.ajax({
 		for (const item of items) {
       		var version = wrapHtml(item.version, "td");
 			var kernel = wrapHtml(item.kernel, "td");
-			var symmos = wrapHtml(item.symmosver, "td);
+			var symmos = wrapHtml(item.symmosver, "td");
 			var size = wrapHtml(item.size, "td");
 			var sha = wrapHtml(item.sha1, "td");
       var md5sum = wrapHtml(item.md5, "td");
