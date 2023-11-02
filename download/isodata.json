@@ -2,6 +2,8 @@
 	"info": [
 		{
 			"version": "2023.11.01",
+			"kernel": "6.5.9",
+			"symmosver": "latest",
 			"type": "Online",
 			"size": "564.3 MiB",
 			"sha1": "e022b10404edba2cb8df90f9183de2064c6ba26b",
