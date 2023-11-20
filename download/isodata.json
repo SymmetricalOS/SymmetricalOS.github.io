@@ -10,6 +10,17 @@
 			"md5": "5296f2af42ef55987f0d18287697877f",
 			"torrent": "https://symmetricalos.github.io/files/symmos-2023.11.01-ONLINE-x86_64.iso.torrent",
 			"file": "https://mega.nz/file/tuU1xYzK#tMt54XRA9Ox0fiFgmz6B8kq__iv3LmD08Z13hRb5Tk8"
+		},
+		{
+			"version": "2023.11.19",
+			"kernel": "latest",
+			"symmosver": "latest",
+			"type": "Online",
+			"size": "567.3 MiB",
+			"sha1": "2bbc26f26b9b441ae1adae1201ef42b61bad7bac",
+			"md5": "774f01852f62fbde7bce6c697b0074aa",
+			"torrent": "https://symmetricalos.github.io/files/symmos-2023.11.19-ONLINE-x86_64.iso.torrent",
+			"file": "https://mega.nz/file/cnMgEahT#qY26kVPsSTydFlEJU3kL3BfpANHznSQ0Csc7Or3rHMw"
 		}
 	]
 }
