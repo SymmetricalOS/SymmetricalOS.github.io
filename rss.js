@@ -16,7 +16,10 @@ $.ajax({
 
 		console.log(rss);
 
+		var count = 0;
+
 		for (const item of items) {
+			if (count >= 20) break;
 			if (item.link == "" || item.link == null) {
 				var title = wrapHtml(item.title, "h2", " title=\"" + item.guid + "\"");
 			} else {
@@ -35,6 +38,7 @@ $.ajax({
 				"small"
 			);
 			buffer = buffer + wrapHtml(wrapHtml(item.title + " [By " + item.author + " at " + localtime + "]", "summary") + wrapHtml(title + content + sub, "div"), "details", " title=\"" + item.guid + "\"")
+			count++;
 		}
 		document.getElementById("news2").innerHTML = buffer;
 	}
