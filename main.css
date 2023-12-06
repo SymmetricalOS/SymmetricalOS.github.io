@@ -8,7 +8,7 @@ body {
 	border-style: solid;
 	margin: 32px;
 	padding: 10px;
-	width: fit-content;
+	width: flex;
 }
 
 .hmm {
