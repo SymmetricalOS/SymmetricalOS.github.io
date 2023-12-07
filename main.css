@@ -4,6 +4,7 @@ body {
 
 .bigbox {
 	display: inline-block;
+	position: absolute;
 	border: black;
 	border-style: solid;
 	margin: 32px;
