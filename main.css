@@ -3,7 +3,7 @@ body {
 }
 
 .bigbox {
-	display: inline-block;
+	display: block;
 	position: absolute;
 	border: black;
 	border-style: solid;
